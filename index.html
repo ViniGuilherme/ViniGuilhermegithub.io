@@ -1,72 +1,911 @@
-<!DOCTYPE html>
-<!-- 
-Código escrito por MTHS1901 em um tutorial no YouTube
-Confira: https://www.youtube.com/watch?v=zxxB9SFh9p4
-Este arquivo já esta pronto e você pode mandar para quem quiser
--->
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ola agatha</title>
-</head>
-
-<body>
-    <div id="conteudo">
-        <h2>Aceita namorar comigo??</h2>
-        <div style="margin: auto;width: 170px;">
-            <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
-            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
-        </div>
-    </div>
-</body>
-<style>
-    #conteudo {
-        background: #ff7a7a;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        text-align: center;
-        font-family: sans-serif;
-    }
-
-    .btn {
-        background: black;
-        color: white;
-        border: none;
-        padding: 10px;
-        width: 80px;
-        border-radius: 5px;
-    }
-</style>
-
-<script>
-    function sim() {
-        alert("Você aceitou! :)");
-        // redireciona para um URL após clicar no SIM
-        location.href = "https://www.youtube.com/watch?v=MDmcVLadrmY";
-    }
-
-    function desvia(btn) {
-        // btn declarado na função
-        btn.style.position = 'absolute';
-        btn.style.bottom = geraPosicao(10, 90);
-        btn.style.left = geraPosicao(10, 90);
-        console.log('opa, desviei...');
-    }
-
-    function geraPosicao(min, max) {
-        return (Math.random() * (max - min) + min) + "%";
-    }
-
-    /* Apague se quiser, isso apenas escreve MTHS1901 e o link para o tutorial no console */
-    const o = "MTHS1901", e = 90, l = "bold"; console.log(`%c${o}`, "font-size: 90px; font-weight: bold; background: linear-gradient(90deg, red, yellow);"), console.log("Tutorial: https://www.youtube.com/watch?v=zxxB9SFh9p4");
-
-</script>
-
+HOME 
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Poluição do ar</title> 
+<link rel="stylesheet" href="styles.css"> 
+<link rel="stylesheet" href="/css/bootstrap.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+rel="stylesheet"> 
+</head> 
+<body> 
+<nav class="navbar sticky-top d-flex justify-content-between"> 
+<img src="img/logo.png" alt=""> 
+<ul class="position-absolute end-0"> 
+<li class="active"><a href="index.html">Início</a></li> 
+<li><a href="/pages/causas.html">Causas</a></li> 
+<li><a href="/pages/consequencias.html">Consequências</a></li> 
+<li><a href="/pages/solucoes.html">Soluções</a></li> 
+<li><a href="/pages/estrutura.html">Estrutura</a></li> 
+</ul> 
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data
+bs target="#navbarNavAltMarkup" 
+aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle  
+navigation"> 
+<span class="material-icons fs-1"> 
+menu 
+</span> 
+</button> 
+<div class="collapse navbar-collapse bg-white w-100 p-3" 
+id="navbarNavAltMarkup"> 
+8 
+<div class="navbar-nav"> 
+<a class="nav-link active" href="index.html">Início</a> 
+<a class="nav-link" href="/pages/causas.html">Causas</a> 
+<a class="nav-link" href="/pages/consequencias.html">Consequências</a> 
+<a class="nav-link" href="/pages/solucoes.html">Soluções</a> 
+<a class="nav-link" href="/pages/estrutura.html">Estrutura</a> 
+</div> 
+</div> 
+</nav> 
+<div class="bg"> 
+<video id="my-video" controls='false' muted='false' autoplay="true" preload="auto"  
+class="bg-image"> 
+<source src="assets/main.mp4" controls='false' type="video/mp4"> 
+</video> 
+<div class="overflow"> 
+<h1>Poluição do ar</h1> 
+<p> 
+A poluição do ar em grande escala afeta drasticamente a saúde e o meio ambiente,  
+por conta do elevado 
+nível de poluição do ar, podem ocorrer diversos fenômenos na atmosfera, como  
+chuvas acidas, efeito 
+estufa, diminuição da camada de ozônio, etc. 
+</p> 
+<a href="/pages/causas.html" class="btn btn-primary btnAbout">Saiba mais</a> 
+</div> 
+</div> 
+<div class="d-flex flex-column flex-md-row px-3 px-md-0 justify-content-evenly align
+items center py-5"> 
+<div class="col-md-5 col-12 ms-md-2"> 
+<h2> 
+O que é poluição de ar 
+</h2> 
+<div id="line"></div> 
+<p> 
+9 
+A poluição do ar se dá pela liberação de resíduos que possuem um elevado nível de  
+concentração, que 
+passa a ser nociva para a saúde e meio ambiente, como por exemplo poeiras  
+industriais, aerossóis, 
+monóxido de carbono, dióxido de carbono, entre outros, este tipo de poluição  
+aumenta os problemas 
+ambientais como o efeito estufa, aquecimento global, chuva ácida, dentre outros. 
+</p> 
+</div> 
+<figure class="figure col-12 col-md-5"> 
+<img class="figure-img img-fluid rounded" src="/img/bg3.jpg" alt=""> 
+<figcaption class="figure-caption">Imagem retirada de 
+https://climainfo.org.br/wp-content/uploads/2019/04/photo.jpg 
+</figcaption> 
+</figure> 
+</div> 
+<div class="scrollabeBg flex-column flex-md-row justify-content-between d-flex"> 
+<div 
+class="text-white d-flex flex-column justify-content-center h-100 align-items-start my
+4  
+p-3 col-md-4 col-12 ms-md-4"> 
+<h1>Algumas causas</h1> 
+<div id="line"></div> 
+<p> 
+A poluição atmosférica pode ser causada por fenômenos naturais e pela ação do  
+homem. 
+Dentre as causas naturais da poluição do ar, podemos mencionar os gases emitidos  
+nas erupções 
+vulcânicas, na decomposição de matéria orgânica (causada por fungos e bactérias), 
+na  
+liberação do metano 
+do sistema digestivo de animais e a poeira dos desertos. 
+</p> 
+<a href="/pages/causas.html" class="btn btn-primary btnAbout"><b>Saiba  
+10 
+mais</b></a> 
+</div> 
+<img class="col-12 col-md-6 img-fluid" src="/img/bg1.jpg" alt="" srcset=""> 
+</div> 
+<div class="ourMission container"> 
+<h1>Algumas Consequências</h1> 
+<div id="ourMissioneLine"></div> 
+<div class="icons "> 
+<div class="icon col-10 col-md-2"> 
+<h5>Saúde</h5> 
+<img src="img/icon1.png" alt=""> 
+<p>A poluição interna e externa <b>está relacionada a 7 milhoes de mortes  
+prematuras</b> em todo o mundo 
+a cada ano.</p> 
+</div> 
+<div class="icon col-10 col-md-2"> 
+<h5>Clima</h5> 
+<img src="img/icon2.png" alt=""> 
+<p>Alguns poluentes atmosféricos pioram as mudanças climáticas e <b> aumentam 
+o  
+aquecimento no 
+Ártico</b> e o derretimento do gelo.</p> 
+</div> 
+<div class="icon col-10 col-md-2"> 
+<h5>Água</h5> 
+<img src="img/icon3.png" alt=""> 
+<p>A poluição do ar <b>ageta os padrões de chuvas,</b> a intensidade das  
+tempestades e características 
+climáticas regionais, como as monções.</p> 
+</div> 
+<div class="icon col-10 col-md-2 "> 
+<h5>Energia</h5> 
+<img src="img/icon4.png" alt=""> 
+11 
+<p>Neblina e poeira causadas pela poluição do ar podem <b>reduzir os 
+rendimentos  
+da energia solar</b> em 
+até 25%.</p> 
+</div> 
+<div class="icon col-10 col-md-2"> 
+<h5>Alimentos</h5> 
+<img src="img/icon5.png" alt=""> 
+<p>A poluição do ar <b>reduz o rendimento de diversas culturas</b> em todo o  
+mundo - em até 15% para 
+trigo e soja e 5% para o milho. </p> 
+</div> 
+</div> 
+<div class="learnMoreConsequence mt-5 align-center justify-content-center row col
+12 d flex"> 
+<a href="/pages/consequencias.html" class="btn col-4 btn-primary btnAbout">Saiba  
+mais sobre o assunto</a> 
+</div> 
+<!-- <div class="icons"> 
+<div class="icon"> 
+<img src="img/icon5.png" alt=""> 
+<p>Morte de animais e plantas</p> 
+</div> 
+<div class="icon"> 
+<img src="img/icon6.png" alt=""> 
+<p>Camada de fumaça encobrindo as cidades</p> 
+</div> 
+</div> --> 
+</div> 
+<div class="footerBg"> 
+<div class="footerIcons container"> 
+<div class="footerIcon col-12 col-md-3"> 
+<img src="img/footerIcon1.png" alt=""> 
+12 
+<h1>1,7%</h1> 
+<p>Municípios do país <br /> com cobertura de monitoramento<br /> da qualidade  
+do ar</p> 
+</div> 
+<div class="footerIcon col-12 col-md-3"> 
+<img src="img/footerIcon2.png" alt=""> 
+<h1>2K</h1> 
+<p>Internações por<br /> doenças respiratórias <br /> relacionadas com as  
+queimas</p> 
+</div> 
+<div class="footerIcon col-12 col-md-3"> 
+<img src="img/footerIcon3.png" alt=""> 
+<h1>+25x</h1> 
+<p>Poluição do que a média <br /> histórica da região.</p> 
+</div> 
+<div class="footerIcon col-12 col-md-3"> 
+<img src="img/footerIcon4.png" alt=""> 
+<h1>4º</h1> 
+<p>Ranking do Brasil <br /> em emissão de gases<br /> poluentes desde 1850</p> 
+</div> 
+</div> 
+</div> 
+<footer class="d-flex align-items-center justify-content-center"> 
+<p class="p-0 m-0 text-white"> 
+Copyright ©2022 APS. All Rights Reserved 
+</p> 
+</footer> 
+<script src="/js/bootstrap.js"></script> 
+<script> 
+document.getElementById('vid').play(); 
+</script> 
+</body> 
+</html> 
+CAUSAS 
+13 
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Causas - Poluição do ar</title> 
+<link rel="stylesheet" href="/styles.css"> 
+<link rel="stylesheet" href="/css/causas.css"> 
+<link rel="stylesheet" href="/css/bootstrap.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+rel="stylesheet"> 
+</head> 
+<body> 
+<nav class="navbar sticky-top d-flex justify-content-between"> 
+<img src="/img/logo.png" alt=""> 
+<ul> 
+<li><a href="/index.html">Início</a></li> 
+<li class="active"><a href="./causas.html">Causas</a></li> 
+<li><a href="./consequencias.html">Consequências</a></li> 
+<li><a href="./solucoes.html">Soluções</a></li> 
+<li><a href="/pages/estrutura.html">Estrutura</a></li> 
+</ul> 
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data
+bs target="#navbarNavAltMarkup" 
+aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle  
+navigation"> 
+<span class="material-icons fs-1"> 
+menu 
+</span> 
+</button> 
+<div class="collapse navbar-collapse bg-white w-100 p-3" 
+id="navbarNavAltMarkup"> 
+<div class="navbar-nav"> 
+14 
+<a class="nav-link " href="/index.html">Início</a> 
+<a class="nav-link active" href="/pages/causas.html">Causas</a> 
+<a class="nav-link" href="/pages/consequencias.html">Consequências</a> 
+<a class="nav-link" href="/pages/solucoes.html">Soluções</a> 
+<a class="nav-link" href="/pages/estrutura.html">Estrutura</a> 
+</div> 
+</div> 
+</nav> 
+<div class="bg"> 
+<img src="/img/bg6.jpg" style="width: 100%;height: 100%;object-fit: cover;" alt=""> 
+<div class="overflow text-center d-flex justify-content-center p-0 align-items-center"> 
+<h1 class="text-center">Causas</h1> 
+<p class="text-center m-0" style="padding:0 25% ;"> 
+Dentre as principais ações que provocam a poluição atmosférica, estão: a queima 
+de  
+combustíveis fósseis 
+para a geração de energia para indústrias e como combustíveis em automóveis. 
+</p> 
+</div> 
+</div> 
+<div class="veichle"> 
+<div> 
+<h2> 
+Veículos 
+</h2> 
+<div id="line"></div> 
+<p> 
+Os impactos mais conhecidos pelos veículos são os gases poluentes liberados que 
+causas o aquecimento global e efeito estufa. 
+Com a liberação desses gases pelos veículos , a qualidade de vida das pessoas 
+são 
+afetadas com essa poluição , principalmente em grandes cidades como: são Paulo, 
+Rio de Janeiro, Minas Gerais e entre outras grandes cidades do mundo . 
+</p> 
+15 
+</div> 
+<div> 
+<figure class="figure"> 
+<img class="figure-img img-fluid rounded" src="/img/car.webp" alt=""> 
+<figcaption class="figure-caption">A maioria desses gases causam efeito estufa e  
+problemas de respiração 
+(Foto: depositphotos) 
+</figcaption> 
+</figure> 
+</div> 
+</div> 
+<div class="scrollabeBg flex-column flex-md-row align-items-center justify-content
+between  
+d-flex"> 
+<div class="overflow col-md-6 col-12 ms-md-4"> 
+<h1>indústrias</h1> 
+<div id="line"></div> 
+<p> 
+As indústrias geram umas matérias biológicas , gases e líquidos que 
+contaminam os rios , mares , lagos e ar . 
+Como consequências , isso tudo contribui diretamente para a devastação das 
+florestas e extinção de várias espécies de animais. 
+</p> 
+</div> 
+<figure class="figure col-12 col-md-5"> 
+<img class="figure-img img-fluid rounded" style="width: 100%;height: 100%;object-fit:  
+cover;" 
+src="/img/bg12.jpg" alt=""> 
+<figcaption class="text-white figure-caption">Imagem retirada de 
+http://geo-carminha.blogspot.com/2012/09/industrias-x-impactos-ambientais.html 
+</figcaption> 
+</figure> 
+</div> 
+16 
+<div class="d-flex px-md-0 flex-md-row flex-column align-items-center container px-4 
+py-5  
+justify-content-between"> 
+<div class="col-md-5 col-12 ms-md-4"> 
+<h2> 
+Queimadas 
+</h2> 
+<div id="line"></div> 
+<p> 
+Com as queimadas os efeitos podem ser: 
+<ul> 
+<li> 
+Redução da biodiversidade 
+</li> 
+<li> 
+Favorecimento de erosões devido a retirada da cobertura vegetal 
+</li> 
+<li> 
+Favorecimento de formação de voçorocas 
+</li> 
+<li> 
+Aumento do PH do solo 
+</li> 
+<li> 
+Piora da qualidade do ar devido a fumaça espalhada no ar 
+</li> 
+<li> 
+Destruição de micro-organismos do sono 
+</li> 
+</ul> 
+</p> 
+</div> 
+<figure class="figure col-12 col-md-5"> 
+<img class="figure-img img-fluid rounded" src="/img/queimadas.webp" alt=""> 
+17 
+<figcaption class="figure-caption">Imagem registrada na terça-feira, dia 27, mostra  
+queimadas na terras do 
+produtor rural José Silva de Souza, em Santo Antônio do Matupi, no sul do 
+Amazonas.  
+— Foto: Gabriela 
+Biló/Estadão Conteúdo 
+</figcaption> 
+</figure> 
+</div> 
+<footer class="d-flex align-items-center justify-content-center"> 
+<p class="p-0 m-0 text-white"> 
+Copyright ©2022 APS. All Rights Reserved 
+</p> 
+</footer> 
+<script src="/js/bootstrap.js"></script> 
+</body> 
+</html> 
+CONSEQÛENCIAS 
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Consequências - Poluição do ar</title> 
+<link rel="stylesheet" href="/styles.css"> 
+<link rel="stylesheet" href="/css/bootstrap.css"> 
+<link rel="stylesheet" href="/css/consequecias.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+rel="stylesheet"> 
+</head> 
+<body> 
+<nav class="navbar sticky-top d-flex justify-content-between"> 
+<img src="/img/logo.png" alt=""> 
+18 
+<ul> 
+<li><a href="/index.html">Início</a></li> 
+<li><a href="./causas.html">Causas</a></li> 
+<li class="active"><a href="./consequencias.html">Consequências</a></li> 
+<li><a href="./solucoes.html">Soluções</a></li> 
+<li><a href="/pages/estrutura.html">Estrutura</a></li> 
+</ul> 
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data
+bs target="#navbarNavAltMarkup" 
+aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle  
+navigation"> 
+<span class="material-icons fs-1"> 
+menu 
+</span> 
+</button> 
+<div class="collapse navbar-collapse bg-white w-100 p-3" 
+id="navbarNavAltMarkup"> 
+<div class="navbar-nav"> 
+<a class="nav-link " href="/index.html">Início</a> 
+<a class="nav-link " href="/pages/causas.html">Causas</a> 
+<a class="nav-link active" href="/pages/consequencias.html">Consequências</a> 
+<a class="nav-link" href="/pages/solucoes.html">Soluções</a> 
+<a class="nav-link" href="/pages/estrutura.html">Estrutura</a> 
+</div> 
+</div> 
+</nav> 
+<div class="bg"> 
+<img src="/img/bg5.jpg" style=" 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+" alt=""> 
+<div class="overflow d-flex justify-content-center p-0 align-items-center"> 
+<h1>Poluição do ar</h1> 
+19 
+<p class="text-center m-0" style="padding:0 25% ;"> 
+A poluição do ar causadas pelos resíduos liberados na atmosfera pelas empresas,  
+veículos e queimadas, 
+causam consequências que se não tiver uma rápida e severa mudança poderá ser  
+irreversível, cada vez mais 
+vemos o número do derretimento das geleiras e calotas polares aumentar,  
+igualmente a camada de ozônio, 
+sem contar o prejuízo a saúdes, principalmente de crianças e idoso. 
+</p> 
+</div> 
+</div> 
+<div class="veichle"> 
+<div> 
+<h2> 
+DERRETIMENTO DAS GELEIRAS 
+</h2> 
+<div id="line"></div> 
+<p> 
+O derretimento das calotas polares e geleiras, causadas pelos aquecimento global,  
+está cada vez mais 
+chegando a estados críticos, com níveis aumentando cada vez mais, sem ter uma  
+previsão de quando ira 
+parar de subir, através de um estudo feito pela revista Science, pode ser notado,  
+através de satélites, 
+que o derretimento de aproximadamente 4.300 bilhões de toneladas de gelo  
+aconteceram nos últimos 20 
+anos, isso somente na região da Antártida, fazendo assim também que o nível do 
+mar  
+suba 
+consideravelmente, aproximadamente 11 milímetros, pode parecer pouca mas  
+comparado aos números 
+anteriores, não chega nem perto da metade dos últimos. O derretimento afeta  
+também cidades como a de 
+20 
+quito (Equador) onde é a principal fonte de abastecimento de água potável nas 
+secas,  
+países que usam 
+águas das geleiras como fonte de energia, lugares assim seriam gravemente 
+afetados  
+pelo derretimento. 
+(https://cienciahoje.org.br/poluicao-derretera-geleiras-dos-andes/) 
+</p> 
+</div> 
+<div> 
+<figure class="figure"> 
+<img class="figure-img img-fluid rounded" src="/img/bg9.jpg" alt=""> 
+<figcaption class="figure-caption">Imagem retirada de 
+https://meioambiente.culturamix.com/recursos-naturais/derretimento-das calotas
+polares 
+</figcaption> 
+</figure> 
+</div> 
+</div> 
+<div class="scrollabeBg flex-column flex-md-row align-items-center justify-content
+between  
+d-flex"> 
+<div class="text-white col-md-6 col-12 ms-md-4"> 
+<h2>DESTRUIÇÃO DA CAMADA DE OZÔNIO</h2> 
+<div id="line"></div> 
+<p> 
+Apesar de ozônio ser um gás prejudicial para plantas e animais, a camada de 
+ozônio é  
+de suma importância 
+para o mundo, já que o ozônio presente na atmosfera é fundamenta para a vida na  
+terra, esse gás absorve 
+mais de 95% dos raios ultravioletas vindo do sol, protegendo assim a vida terrestre,  
+entretanto pode se 
+notar que a quantidade deste gás esta diminuindo em algumas partes do planeta,  
+21 
+provocando certos 
+“buracos” na camada de ozônio, podendo a longo prazo, se nada for feito, acabar  
+com essa camada que faz 
+a proteção da vida na terra, segundo o INPE, a concentração deste gás está 3% 
+mais  
+baixa, resultando em 
+um buraco equivalente a 15% da superfície terrestre. 
+</p> 
+</div> 
+<figure class="figure col-12 col-md-5"> 
+<img class="figure-img img-fluid rounded" src="/img/bg10.webp" alt=""> 
+<figcaption class="text-white figure-caption">Imagem retirada de 
+https://www.preparaenem.com/geografia/camada-ozonio.htm 
+</figcaption> 
+</figure> 
+</div> 
+<div class="d-flex px-md-0 flex-md-row flex-column align-items-center container px-4 
+py-5  
+justify-content-between"> 
+<div class="col-md-6 col-12 me-md-5 ms-md-4"> 
+<h2> 
+DANOS A SAUDE 
+</h2> 
+<div id="line"></div> 
+<p> 
+A poluição do ar afeta drasticamente a saúde, muitas vezes sem nem percebermos,  
+através da inalação de 
+gases e partículas finas, que geram danos aos pulmões e aos sistemas  
+cardiovasculares, podendo causar 
+diversas doenças, até mesmo causar câncer em algumas pessoas. Viver em uma  
+cidade com um alto nível de 
+poluição aumenta o risco de um ataque cardíaco em 75%, os números de mortes  
+prematuras causadas pela 
+22 
+poluição do ar também são muito elevadas, principalmente de crianças pela 
+inalação  
+de gases gerados 
+pelas queimadas, sem contar o grande custo econômico que são gerados pela  
+poluição do ar, na média de 
+US$208 milhões ao ano. 
+</p> 
+</div> 
+<figure class="col-12 figure col-md-6"> 
+<img class="figure-img img-fluid rounded" src="/img/bg11.jpg" alt=""> 
+<figcaption class="mt-2 figure-caption">Imagem retirada de 
+https://sitesustentavel.com.br/poluicao-do-ar/ 
+</figcaption> 
+</figure> 
+</div> 
+<footer class="d-flex align-items-center justify-content-center"> 
+<p class="p-0 m-0 text-white"> 
+Copyright ©2022 APS. All Rights Reserved 
+</p> 
+</footer> 
+<script src="/js/bootstrap.js"></script> 
+</body> 
+</html> 
+ESTRUTURA 
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Estrutura - Poluição do ar</title> 
+<link rel="stylesheet" href="/styles.css"> 
+<link rel="stylesheet" href="/css/causas.css"> 
+<link rel="stylesheet" href="/css/bootstrap.css"> 
+23 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+rel="stylesheet"> 
+</head> 
+<body> 
+<nav class="navbar sticky-top d-flex justify-content-between"> 
+<img src="/img/logo.png" alt=""> 
+<ul> 
+<li><a href="/index.html">Início</a></li> 
+<li><a href="./causas.html">Causas</a></li> 
+<li><a href="./consequencias.html">Consequências</a></li> 
+<li><a href="./solucoes.html">Soluções</a></li> 
+<li class="active"><a href="/pages/estrutura.html">Estrutura</a></li> 
+</ul> 
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data
+bs target="#navbarNavAltMarkup" 
+aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle  
+navigation"> 
+<span class="material-icons fs-1"> 
+menu 
+</span> 
+</button> 
+<div class="collapse navbar-collapse bg-white w-100 p-3" 
+id="navbarNavAltMarkup"> 
+<div class="navbar-nav"> 
+<a class="nav-link " href="/index.html">Início</a> 
+<a href="/pages/causas.html">Causas</a> 
+<a class="nav-link" href="/pages/consequencias.html">Consequências</a> 
+<a class="nav-link" href="/pages/solucoes.html">Soluções</a> 
+<a class="nav-link active" class="nav-link"  
+href="/pages/estrutura.html">Soluções</a> 
+</div> 
+</div> 
+</nav> 
+<div class="d-flex flex-column text-black p-5" style="min-height: 80vh;"> 
+24 
+<h1 class="fw-bold">Estrutura do site</h1> 
+<hr> 
+<div class="d-flex flex-column"> 
+<p> 
+<img height="35" width="35" 
+src="https://cdn.iconscout.com/icon/free/png-256/html-file-2330569- 
+1950410.png" alt=""> 
+index.html 
+</p> 
+<p> 
+<img height="35" width="35" src="https://cdn
+icons png.flaticon.com/512/136/136527.png" alt=""> 
+styles.css 
+</p> 
+<p class="fw-bold"> 
+<img height="35" width="35" 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/OneDrive_Folder_I
+ con.s 
+vg/1200px-OneDrive_Folder_Icon.svg.png" 
+alt=""> 
+img 
+</p> 
+<p class="fw-bold"> 
+<img height="35" width="35" 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/OneDrive_Folder_I
+ con.s 
+vg/1200px-OneDrive_Folder_Icon.svg.png" 
+alt=""> 
+css 
+</p> 
+<p class="fw-bold"> 
+<img height="35" width="35" 
+25 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/OneDrive_Folder_I
+ con.s 
+vg/1200px-OneDrive_Folder_Icon.svg.png" 
+alt=""> 
+assets 
+</p> 
+<p class="fw-bold"> 
+<img height="35" width="35" 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/OneDrive_Folder_I
+ con.s 
+vg/1200px-OneDrive_Folder_Icon.svg.png" 
+alt=""> 
+js 
+</p> 
+<p class="fw-bold"> 
+<img height="35" width="35" 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/OneDrive_Folder_I
+ con.s 
+vg/1200px-OneDrive_Folder_Icon.svg.png" 
+alt=""> 
+pages 
+</p> 
+<div class="ms-5 d-flex flex-column"> 
+<p><img height="35" width="35" 
+src="https://cdn.iconscout.com/icon/free/png-256/html-file-2330569- 
+1950410.png" 
+alt="">causas.html</p> 
+<p><img height="35" width="35" 
+src="https://cdn.iconscout.com/icon/free/png-256/html-file-2330569- 
+1950410.png" 
+alt="">consequencias.html</p> 
+26 
+<p><img height="35" width="35" 
+src="https://cdn.iconscout.com/icon/free/png-256/html-file-2330569- 
+1950410.png" 
+alt="">estrutura.html</p> 
+<p><img height="35" width="35" 
+src="https://cdn.iconscout.com/icon/free/png-256/html-file-2330569- 
+1950410.png" 
+alt="">solucoes.html</p> 
+</div> 
+</div> 
+</div> 
+<footer class="d-flex align-items-center justify-content-center"> 
+<p class="p-0 m-0 text-white"> 
+Copyright ©2022 APS. All Rights Reserved 
+</p> 
+</footer> 
+<script src="/js/bootstrap.js"></script> 
+</body> 
+</html> 
+SOLUÇÔES 
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Soluções - Poluição do ar</title> 
+<link rel="stylesheet" href="/styles.css"> 
+<link rel="stylesheet" href="/css/bootstrap.css"> 
+<link rel="stylesheet" href="/css/consequecias.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+rel="stylesheet"> 
+</head> 
+<body> 
+27 
+<nav class="navbar sticky-top d-flex justify-content-between"> 
+<img src="/img/logo.png" alt=""> 
+<ul> 
+<li><a href="/index.html">Início</a></li> 
+<li><a href="./causas.html">Causas</a></li> 
+<li class="active"><a href="./consequencias.html">Consequências</a></li> 
+<li><a href="./solucoes.html">Soluções</a></li> 
+<li><a href="/pages/estrutura.html">Estrutura</a></li> 
+</ul> 
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data
+bs target="#navbarNavAltMarkup" 
+aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle  
+navigation"> 
+<span class="material-icons fs-1"> 
+menu 
+</span> 
+</button> 
+<div class="collapse navbar-collapse bg-white w-100 p-3" 
+id="navbarNavAltMarkup"> 
+<div class="navbar-nav"> 
+<a class="nav-link " href="/index.html">Início</a> 
+<a class="nav-link " href="/pages/causas.html">Causas</a> 
+<a class="nav-link active" href="/pages/consequencias.html">Consequências</a> 
+<a class="nav-link" href="/pages/solucoes.html">Soluções</a> 
+</div> 
+</div> 
+</nav> 
+<div class="bg"> 
+<img src="/img/bg7.jpg" style=" 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+" alt=""> 
+28 
+<div class="overflow d-flex justify-content-center p-0 align-items-center"> 
+<h1>Soluções</h1> 
+<p class="text-center m-0" style="padding:0 25% ;"> 
+Nos últimos anos, o que mais se destaca nos meios de comunicação são notícias  
+relacionadas ao clima, 
+tais como: a poluição do ar que é gerada pela queima de combustíveis fósseis,  
+emissão de gases 
+industriais, queimadas, entre outros. Isso tem provocado aumento das temperaturas  
+globais, efeito 
+estufa, elevação dos níveis 
+dos oceanos, entre outros que estão relacionados. Diante da situação, é preciso 
+que a  
+sociedade atual 
+tome atitudes rigorosas em relação à poluição do ar. 
+</p> 
+</div> 
+</div> 
+<div class="veichle"> 
+<div> 
+<h2> 
+Biocombustível 
+</h2> 
+<div id="line"></div> 
+<p> 
+O biodiesel é um combustível renovável obtido a partir de um processo químico  
+denominado 
+transesterificação. Por meio desse processo, os triglicerídeos presentes nos óleos e  
+gordura animal 
+reagem com um álcool primário, metanol ou etanol, gerando dois produtos: o éster e  
+a glicerina 
+O biodiesel também possui um impacto social positivo, pois, essa fonte renovável  
+evita a poluição do ar, 
+ao contrário do diesel que libera dióxido de enxofre, elemento prejudicial para a  
+saúde da população. No 
+cenário profissional, a produção desse combustível amplia a demanda de mão de  
+29 
+obra no campo e na 
+indústria, mas quem obteve o maior ganho foi o meio ambiente, que vem  
+enfrentando sérios problemas 
+causados pela poluição. 
+</p> 
+</div> 
+<div> 
+<figure class="figure"> 
+<img class="figure-img img-fluid rounded" src="/img/bg13.jpg" alt=""> 
+<figcaption class="figure-caption">Imagem retirada de 
+https://biodieselbrasil.com.br/wp-content/uploads/2018/03/imagem-1-post2.jpg 
+</figcaption> 
+</figure> 
+</div> 
+</div> 
+<div class="scrollabeBg flex-column flex-md-row align-items-center justify-content
+between  
+d-flex"> 
+<div class="text-white col-md-6 col-12 ms-md-4"> 
+<h2>Aumento do uso do transporte público e diminuição do uso do carro</h2> 
+<div id="line"></div> 
+<p> 
+Os carros são responsáveis por 90% da poluição no ar de grandes metrópoles, 
+como  
+São Paulo. Coletivos 
+são alternativas mais atraentes, pois circulam com um número elevado de pessoas 
+a  
+bordo e reduzem o 
+impacto das emissões. Entretanto, modalidades como a bicicleta e carros ou  
+patinetes movidos a 
+eletricidade têm se destacado como opções menos prejudiciais. 
+Cidades que incluem essas alternativas em seus planejamentos são, em geral, mais  
+eficientes e focadas no 
+usuário. 
+30 
+</p> 
+</div> 
+<figure class="figure col-12 col-md-5"> 
+<img class="figure-img img-fluid rounded" src="/img/bg14.jpg" alt=""> 
+<figcaption class="text-white figure-caption">Imagem retirada de 
+https://itdpbrasil.org.br/wp-content/uploads/2015/06/pullandpush.jpg 
+</figcaption> 
+</figure> 
+</div> 
+<div class="d-flex px-md-0 flex-md-row flex-column align-items-center container px-4 
+py-5  
+justify-content-between"> 
+<div class="col-md-6 col-12 me-md-5 ms-md-4"> 
+<h2> 
+Vantagem em substituir a bicicleta por carro 
+</h2> 
+<div id="line"></div> 
+<p> 
+A questão ambiental também deve ser levada em conta na hora de escolher o 
+veículo.  
+Ao contrário dos 
+carros, as bicicletas não poluem o ar com emissões de nenhum tipo de gás danoso 
+à  
+saúde. Em São Paulo, a 
+poluição mata indiretamente vinte pessoas por dia, agravando e acelerando  
+problemas como infarto, 
+acidente vascular cerebral, pneumonia, asma e câncer de pulmão. 90% das 
+emissões  
+de poluentes em São 
+Paulo são causadas pelos veículos automotores. 
+O corpo também agradece a prática de andar de bicicleta. Qualquer atividade física  
+regular previne 
+doenças cardíacas e AVCs, hipertensão, além de prevenir e controlar o diabetes,  
+reduzindo a obesidade, 
+31 
+ativando a musculatura de todo o corpo e diminuindo a ocorrência de doenças  
+crônicas. Além da saúde, 
+resultados estéticos e de resistência também são visíveis: aumento de massa  
+muscular, queima de calorias 
+e melhoria da capacidade respiratória. 
+</p> 
+</div> 
+<figure class="col-12 figure col-md-6"> 
+<img class="figure-img img-fluid rounded" src="/img/bg15.jpg" alt=""> 
+<figcaption class="mt-2 figure-caption">Imagem retirada de 
+https://hubtrinova.com/wp-content/uploads/2020/11/Design-sem-nome-15.jpg 
+</figcaption> 
+</figure> 
+</div> 
+<div class="scrollabeBg flex-column flex-md-row align-items-center justify-content
+between  
+d-flex"> 
+<div class="text-white col-md-6 col-12 ms-md-4"> 
+<h2>Vantagens do carro elétrico</h2> 
+<div id="line"></div> 
+<p> 
+Zero emissões: O carro elétrico não precisa de combustíveis fósseis para funcionar 
+ele  
+converte 
+eletricidade em energia para se locomover. O veículo elétrico é a solução zero  
+emissões de poluentes, 
+pois por utilizar energia ele não emite poluentes, um dos maiores problemas dos  
+nossos dias. 
+</p> 
+</div> 
+<figure class="figure col-12 col-md-5"> 
+<img class="figure-img img-fluid rounded" src="/img/bg16.jpg" alt=""> 
+<figcaption class="text-white figure-caption">Imagem retirada de 
+32 
+https://clickpetroleoegas.com.br/wp-content/uploads/2020/11/Carros
+eletricos manutencao-e-cuidados_artigo-735x490.jpg 
+</figcaption> 
+</figure> 
+</div> 
+<div class="d-flex px-md-0 flex-md-row flex-column align-items-center container px-4 
+py-5  
+justify-content-between"> 
+<div class="col-md-6 col-12 me-md-5 ms-md-4"> 
+<h2> 
+Vantagens do aumento das árvores 
+</h2> 
+<div id="line"></div> 
+<p> 
+A poluição do ar afeta a saúde das pessoas, principalmente crianças, idosos e  
+enfermos. Sintomas como 
+tosse, dor de cabeça e irritação nos olhos podem aparecer em decorrência da  
+presença de poluentes. Um 
+dos benefícios proporcionados pelo plantio de árvores é a purificação do ar. As 
+folhas  
+absorvem o 
+dióxido de carbono para auxiliar na estrutura e nas funções da planta. Junto com o  
+gás carbônico, ainda 
+são absorvidos a poeira e outros contaminantes como monóxido de carbono, 
+dióxido  
+de nitrogênio e de 
+enxofre. Nesse processo, além da retirada de contaminantes do ar, as plantas 
+liberam 
+oxigênio, gás 
+essencial para a vida humana. 
+</p> 
+</div> 
+<figure class="col-12 figure col-md-6"> 
+<img class="figure-img img-fluid rounded" src="/img/arvore.webp" alt=""> 
+33 
+<figcaption class="mt-2 figure-caption">Imagem retirada de 
+https://static.biologianet.com/2021/09/arvore.jpg 
+</figcaption> 
+</figure> 
+</div> 
+<footer class="d-flex align-items-center justify-content-center"> 
+<p class="p-0 m-0 text-white"> 
+Copyright ©2022 APS. All Rights Reserved 
+</p> 
+</footer> 
+<script src="/js/bootstrap.js"></script> 
+</body> 
 </html>
